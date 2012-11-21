@@ -1,0 +1,89 @@
+plugin_git	descriptor_description	Plugin qui implémente le support de Git pour Codendi
+plugin_git	descriptor_name	Plugin Git
+
+plugin_git	title	Plugin Git
+plugin_git	service_lbl_key	Git
+plugin_git	service_desc_key	Git
+
+plugin_git	help_reference_title	Intialiser une référence
+plugin_git	help_init_reference	<li>cd mysources</li><li>git init</li><li>git add .</li><li>git commit -m 'initial commit'</li><li>git push $1 master</li>
+plugin_git	help_init_reference_msg	Le dépôt n'a pas encore été initialisé, ceci est nécessaire pour permettre aux utilisateurs de le cloner
+plugin_git	help_create_reference_title	Créer une réference
+plugin_git	help_create_reference	<li>Une référence est un dépôt principal qui peut-être clonée sur le serveur codendi (ex: développement d'une fonctionnalité) et aussi clonée localement par les membres du projet pour leur développements.</li>
+plugin_git	help_link	Aide
+plugin_git	help_tree	<li>La liste des dépôt est hiérarchique.</li><li>Les références sont les racines tandis que les clones (forks) sont présentés décalés sous leur dépôt parent.</li><li>Chaque dépôt est un lien vers un page de détail et d'adminstration.</li>
+plugin_git	help_fork	<li>Un fork est le clone d'une référence ou d'un fork.</li><li>Il est accessible en lecture et écriture pour tous les membres d'un projet.</li><li>Il peut être utilisé comme le dépôt pour le développement d'une fonctionnalité.</li>
+
+plugin_git	info_access_title	Accès aux dépôts Git
+plugin_git	info_access_content	les dépôts sont accessibles via l'url ci-dessous, dans laquelle REPO_NAME doit être remplacé par le nom du dépôt.<br /> Pour tout problème de permissions contactez l'administrateur du site.
+
+plugin_git	bread_crumb_home	Liste des dépôts
+plugin_git	bread_crumb_help	Aide
+
+plugin_git	tree_title_available_repo	Liste des dépôts
+plugin_git	tree_msg_no_available_repo	Aucun dépôt trouvé
+
+plugin_git	admin_reference_creation_title	Création d'une référence
+plugin_git	admin_reference_creation_input_name	Nom
+plugin_git	admin_reference_creation_submit	Créer
+plugin_git	admin_reference_creation_textarea_name	Description
+
+plugin_git	admin_fork_creation_title	Création d'un fork
+plugin_git	admin_fork_creation_input_name	Nom
+plugin_git	admin_fork_creation_input_parentname	Nom du parent
+plugin_git	admin_fork_creation_submit	Fork
+plugin_git	admin_repolist_selectbox_choose	Choisir
+plugin_git	admin_repolist_selectbox_references	References
+plugin_git	admin_repolist_selectbox_forks	Forks
+
+plugin_git	admin_deletion_title	Suppression d'un dépôt
+plugin_git	admin_deletion_submit	Supprimer ce dépôt
+plugin_git	admin_deletion_input_name	Supprimer ce dépôt
+plugin_git	admin_save_submit	Enregistrer
+
+
+plugin_git	controller_access_denied	Vous n'êtes pas autorisé a accéder �  cette page. Vous devez être membre du projet
+plugin_git	controller_action_permission_denied	Vous n'avez pas les droits suffisant pour effectuer cette action
+
+plugin_git	dao_delete_error	Impossible de supprimer le dépôt de la base de données
+plugin_git	dao_delete_params	Impossible de supprimer le dépôt de la base de données, paramètres invalides
+
+plugin_git	dao_update_error	Impossible d'enregistrer les données du dépôt
+plugin_git	dao_search_params	Dépôt introuvable, paramètres invalides
+plugin_git	dao_search_error	Dépôt introuvable
+
+plugin_git	dao_child_params	Paramètres invalides
+
+plugin_git	backend_delete_haschild_error	Impossible de supprimer le dépôt : est parent d'au moins un autre dépôt
+plugin_git	backend_gitroot_mkdir_error	Erreur �  la création du répertoire racine des dépôts Git (Contactez l'administrateur)
+plugin_git	backend_projectroot_mkdir_error	Erreur �  la création du répertoire racine des dépôts Git du projet (Contactez l'administrateur)
+plugin_git	backend_projectroot_chgrp_error	Erreur aux changement des permissions du répertoire racine des dépôts Git du projet (Contactez l'administrateur)
+
+plugin_git	actions_params_error	Paramètre requis manquants
+plugin_git	actions_delete_process	Le dépôt va être supprimé dans quelques secondes
+plugin_git	actions_input_format_error	 Le nom du dépôt doit uniquement contenir des caractères alpha numériques et - _ , la longueur maximale est de
+plugin_git	actions_create_repo_process	Le dépôt va être crée dans quelques secondes
+plugin_git	actions_repo_not_found	Le dépôt n'existe pas
+plugin_git	actions_repo_access	Les droits d'accès au dépôt vont être modifiés dans quelques secondes
+plugin_git	actions_save_repo_process	Les données du dépôt ont été enregistrées
+plugin_git	actions_delete_backup	Une sauvegarde du dépôt sera disponible dans le repertoire
+
+plugin_git	view_repo_description	Description
+plugin_git	view_repo_creator	Crée par
+plugin_git	view_repo_creation_date	Date
+plugin_git	view_repo_parent	Parent
+plugin_git	view_repo_initialized	Initialisé
+plugin_git	view_repo_not_initialized	Non initialisé
+plugin_git	view_repo_clone_url	Clone url
+plugin_git	view_repo_access	Accès
+
+plugin_git	repo_not_initialized	Le dépôt n'est pas initialisé
+plugin_git	confirm_deletion_msg	Etes-vous certain(e) de vouloir supprimer ce dépôt ?
+
+plugin_git	yes	Oui
+plugin_git	no	Non
+
+plugin_git	project_service_not_available	Le service n'est pas disponible pour votre projet (Contactez l'administrateur du site)
+plugin_git	reference_commit_nature_key	Commit Git
+plugin_git	reference_commit_desc_key	Commit Git
+
