@@ -16,20 +16,18 @@
  * along with Tuleap. If not, see <http://www.gnu.org/licenses/>.
  */
 
-//
-// front-end to plugin Git//
+/**
+ * Description of HgDriverException
+ *
+ * @author gstorchi
+ */
+class HgDriverException extends Exception {
+    //put your code here
 
-require_once('pre.php');
-require_once('common/plugin/PluginManager.class.php');
-
-$plugin_manager =& PluginManager::instance();
-$p =& $plugin_manager->getPluginByName('hg');
-if ($p && $plugin_manager->isPluginAvailable($p)) {
-    $p->process();
-} else {
-    header('Location: '.get_server_url());
+    public function __construct($msg) {
+      parent::__construct(__CLASS__.' : '.$msg);
+    }
 }
-
 
 
 ?>

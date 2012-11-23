@@ -42,7 +42,7 @@ plugin_git	admin_deletion_input_name	Supprimer ce dépôt
 plugin_git	admin_save_submit	Enregistrer
 
 
-plugin_git	controller_access_denied	Vous n'êtes pas autorisé a accéder �  cette page. Vous devez être membre du projet
+plugin_git	controller_access_denied	Vous n'êtes pas autorisé a accéder à cette page. Vous devez être membre du projet
 plugin_git	controller_action_permission_denied	Vous n'avez pas les droits suffisant pour effectuer cette action
 
 plugin_git	dao_delete_error	Impossible de supprimer le dépôt de la base de données
@@ -55,8 +55,8 @@ plugin_git	dao_search_error	Dépôt introuvable
 plugin_git	dao_child_params	Paramètres invalides
 
 plugin_git	backend_delete_haschild_error	Impossible de supprimer le dépôt : est parent d'au moins un autre dépôt
-plugin_git	backend_gitroot_mkdir_error	Erreur �  la création du répertoire racine des dépôts Git (Contactez l'administrateur)
-plugin_git	backend_projectroot_mkdir_error	Erreur �  la création du répertoire racine des dépôts Git du projet (Contactez l'administrateur)
+plugin_git	backend_gitroot_mkdir_error	Erreur à la création du répertoire racine des dépôts Git (Contactez l'administrateur)
+plugin_git	backend_projectroot_mkdir_error	Erreur à la création du répertoire racine des dépôts Git du projet (Contactez l'administrateur)
 plugin_git	backend_projectroot_chgrp_error	Erreur aux changement des permissions du répertoire racine des dépôts Git du projet (Contactez l'administrateur)
 
 plugin_git	actions_params_error	Paramètre requis manquants
