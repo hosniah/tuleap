@@ -4,3 +4,13 @@ plugin_hg	descriptor_name	Mercurial Plugin
 plugin_hg	title	Mercurial Plugin
 plugin_hg	service_lbl_key	Mercurial
 plugin_hg	service_desc_key	Mercurial
+
+plugin_hg	tree_title_available_repo	Repository list
+plugin_hg	tree_msg_no_available_repo	No repository found
+plugin_hg	bread_crumb_home	Repository list
+plugin_hg	bread_crumb_help	Help
+
+plugin_hg	admin_reference_creation_title	Reference creation
+plugin_hg	admin_reference_creation_input_name	Name
+plugin_hg	admin_reference_creation_textarea_name	Description
+plugin_hg	admin_reference_creation_submit	Create
