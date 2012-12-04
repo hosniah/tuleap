@@ -15,20 +15,17 @@
  * You should have received a copy of the GNU General Public License
  * along with Tuleap. If not, see <http://www.gnu.org/licenses/>.
  */
-/**
- *
- * This is a part of lite Model/View/Controler design pattern.
- *
- * @package Codendi-mvc
- * @author    Guillaume Storchi
- * @license   http://opensource.org/licenses/gpl-license.php GPL
- */
 
 require_once('common/include/Codendi_HTMLPurifier.class.php');
 
 class PluginViews {
-    
+
     protected $request;
+
+    /**
+     *
+     * @var PluginController
+     */
     protected $controller;
 
     public function __construct($controller) {
@@ -44,7 +41,7 @@ class PluginViews {
 
     public function getData() {
         return $this->controller->getData();
-    }  
+    }
 
     public function display($name, $params=array()) {
         if ( empty($name) ) {
@@ -57,6 +54,5 @@ class PluginViews {
         $linkTo = '<a href="'.$href.'" '.$options.' >'.$link.'</a>';
         return $linkTo;
     }
-   
 }
 ?>

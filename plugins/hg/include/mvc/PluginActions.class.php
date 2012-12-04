@@ -16,10 +16,6 @@
  * along with Tuleap. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/**
- * @author    guillaume Storchi
- * @license   http://opensource.org/licenses/gpl-license.php GPL
- */
 class PluginActions {
 
     protected $controller;    
@@ -32,6 +28,10 @@ class PluginActions {
 
     public function getController() {
         return $this->controller;
+    }
+
+    public function setController(PluginController $controller) {
+        $this->controller = $controller;
     }
 
     public function getData() {
