@@ -23,7 +23,7 @@ require_once('HgActions.class.php');
 /**
  * HgPlugin
  */
-class HgPlugin extends Plugin {
+class hgPlugin extends Plugin {
 
 
     public function __construct($id) {
