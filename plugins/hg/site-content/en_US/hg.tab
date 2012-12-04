@@ -1,0 +1,6 @@
+plugin_hg	descriptor_description	Plugin which provides Mercurial support for Tuleap
+plugin_hg	descriptor_name	Mercurial Plugin
+
+plugin_hg	title	Mercurial Plugin
+plugin_hg	service_lbl_key	Mercurial
+plugin_hg	service_desc_key	Mercurial
