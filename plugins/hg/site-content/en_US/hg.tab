@@ -15,3 +15,14 @@ plugin_hg	admin_reference_creation_input_name	Name
 plugin_hg	admin_reference_creation_textarea_name	Description
 plugin_hg	admin_reference_creation_submit	Create
 plugin_hg	actions_create_repo_process	Repository will be created in a few seconds
+
+plugin_hg	view_repo_description	Description
+plugin_hg	view_repo_creator	Created by
+plugin_hg	view_repo_creation_date	Date
+plugin_hg	view_repo_clone_url	Clone url
+plugin_hg	view_repo_access	Access
+
+plugin_hg	admin_fork_creation_input_name	Name
+plugin_hg	admin_fork_creation_submit	Fork
+plugin_hg	admin_deletion_submit	Delete this repository
+plugin_hg	admin_save_submit	Save

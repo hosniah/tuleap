@@ -15,3 +15,14 @@ plugin_hg	admin_reference_creation_input_name	Nom
 plugin_hg	admin_reference_creation_submit	Créer
 plugin_hg	admin_reference_creation_textarea_name	Description
 plugin_hg	actions_create_repo_process	Le dépôt va être crée dans quelques secondes
+
+plugin_hg	view_repo_description	Description
+plugin_hg	view_repo_creator	Crée par
+plugin_hg	view_repo_creation_date	Date
+plugin_hg	view_repo_clone_url	Clone url
+plugin_hg	view_repo_access	Accés
+
+plugin_hg	admin_fork_creation_input_name	Nom
+plugin_hg	admin_fork_creation_submit	Fork
+plugin_hg	admin_deletion_submit	Suppression d'un dépôt
+plugin_hg	admin_save_submit	Enregistrer
