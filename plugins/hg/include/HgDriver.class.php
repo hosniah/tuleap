@@ -92,7 +92,8 @@ class HgDriver implements DVCSDriver {
         if ( $ret !== 0 ) {
             throw new HgDriverErrorException('Hg init failed on '.$cmd.PHP_EOL.implode(PHP_EOL, $out));
         }
-        $this->setPermissions(getcwd());
+        //Bypass permissions setting
+        //$this->setPermissions(getcwd());
         return true;
     }
 
@@ -109,12 +110,12 @@ class HgDriver implements DVCSDriver {
     }    
 
     public function activateHook($hookName, $repoPath, $uid, $gid) {
-	//NOT IMPLEMENTED YET
+    //NOT IMPLEMENTED YET
         return true;
     }
 
     public function masterExists($repoPath) {
-	//NOT IMPLEMENTED YET
+    //NOT IMPLEMENTED YET
         return true;
     }
 
@@ -131,19 +132,23 @@ class HgDriver implements DVCSDriver {
         return '';
     }
 
-    //TODO check path 
+    /**
+     * Ensure repository has the right permissions
+     *
+     * @param String $path Path to the repository
+     *
+     * @return Boolean
+     */
     protected function setPermissions($path) {
         $rcode  = 0;
-        $cmd    = 'find '.$path.' -type d | xargs chmod u+rwx,g+rwxs,o-rwx '.$path;
+        $cmd    = 'find '.$path.' -type d | xargs chmod u+rwx,g+rwxs '.$path;
         $output = system($cmd, $rcode);
         if ( $rcode != 0 ) {
             throw new HgDriverErrorException($cmd.' -> '.$output);
         }
-        $rcode  = 0;
-        $cmd    = 'chmod g+w '.$path.'/HEAD';
-        $output = system($cmd, $rcode);
-        if ( $rcode != 0 ) {
-            throw new HgDriverErrorException($cmd.' -> '.$output);
+
+        if (!chmod($path.DIRECTORY_SEPARATOR.'HEAD', 0664)) {
+            throw new GitDriverErrorException('Unable to set permissions on HEAD');
         }
         return true;
     }
