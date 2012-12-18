@@ -14,3 +14,4 @@ plugin_hg	admin_reference_creation_title	Reference creation
 plugin_hg	admin_reference_creation_input_name	Name
 plugin_hg	admin_reference_creation_textarea_name	Description
 plugin_hg	admin_reference_creation_submit	Create
+plugin_hg	actions_create_repo_process	Repository will be created in a few seconds
