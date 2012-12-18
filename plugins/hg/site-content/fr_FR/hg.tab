@@ -28,3 +28,7 @@ plugin_hg	admin_deletion_submit	Suppression d'un dépôt
 plugin_hg	admin_save_submit	Enregistrer
 
 plugin_git	actions_save_repo_process	Les données du dépôt ont été enregistrées
+
+plugin_hg	help_link	Aide
+plugin_hg	help_tree	<li>La liste des dépôt est hiérarchique.</li><li>Les références sont les racines tandis que les clones (forks) sont présentés décalés sous leur dépôt parent.</li><li>Chaque dépôt est un lien vers un page de détail et d'adminstration.</li>
+plugin_hg	help_fork	<li>Un fork est le clone d'une référence ou d'un fork.</li><li>Il est accessible en lecture et écriture pour tous les membres d'un projet.</li><li>Il peut être utilisé comme le dépôt pour le développement d'une fonctionnalité.</li>
