@@ -74,7 +74,7 @@ class HgDriver implements DVCSDriver {
      */
     public function init($bare=false) {
         //TODO there are more things to do
-        $rcode = 0;            
+        /*$rcode = 0;            
         $cmd = 'hg init';
         if ( $bare === false ) {
             $cmd = 'hg init';
@@ -83,12 +83,16 @@ class HgDriver implements DVCSDriver {
                 throw new HgDriverErrorException($cmd.' -> '.$output);
             }
             return true;
+        }*/
+
+        $cmd = 'hg init 2>&1';
+        $out = array();
+        $ret = -1;
+        exec($cmd, $out, $ret);
+        if ( $ret !== 0 ) {
+            throw new HgDriverErrorException('Hg init failed on '.$cmd.PHP_EOL.implode(PHP_EOL, $out));
         }
-        $output = system($cmd, $rcode);
-        if ( $rcode != 0 ) {
-            throw new HgDriverErrorException($cmd.' -> '.$output);
-        }
-        $this->setPermissions( getcwd() );
+        $this->setPermissions(getcwd());
         return true;
     }
 
