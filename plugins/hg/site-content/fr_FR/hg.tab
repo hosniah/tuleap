@@ -26,3 +26,5 @@ plugin_hg	admin_fork_creation_input_name	Nom
 plugin_hg	admin_fork_creation_submit	Fork
 plugin_hg	admin_deletion_submit	Suppression d'un dépôt
 plugin_hg	admin_save_submit	Enregistrer
+
+plugin_git	actions_save_repo_process	Les données du dépôt ont été enregistrées
