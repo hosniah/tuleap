@@ -32,3 +32,8 @@ plugin_hg	actions_save_repo_process	Repository informations have been saved
 plugin_hg	help_link	Help
 plugin_hg	help_tree	<li>The tree of repositories shows the repository hierarchie. References are roots as clones (forks) are displayed below their parent</li><li>Each repository is a link to a detail and administration page</li>
 plugin_hg	help_fork	<li>A fork is a reference clone or a fork clone</li><li>It is accessible by all project members with read and write permissions.</li><li>It may be used as a repository for any feature developpement.</li>
+plugin_hg	confirm_deletion_msg	Do you really want to delete this repository ?
+plugin_hg	yes	Yes
+plugin_hg	no	No
+plugin_hg	actions_delete_process	Repository will be removed in a few seconds
+plugin_hg	actions_delete_backup	A repository backup will be available in the backup directory
