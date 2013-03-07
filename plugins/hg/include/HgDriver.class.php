@@ -35,7 +35,7 @@ class HgDriver implements DVCSDriver {
 
     private static $instance;
     
-    private function __construct() {       
+    private function __construct() {
     }
 
     public static function instance() {
@@ -73,18 +73,6 @@ class HgDriver implements DVCSDriver {
      * @return Boolean
      */
     public function init($bare=false) {
-        //TODO there are more things to do
-        /*$rcode = 0;            
-        $cmd = 'hg init';
-        if ( $bare === false ) {
-            $cmd = 'hg init';
-            $output = system($cmd, $rcode);
-            if ( $rcode != 0 ) {
-                throw new HgDriverErrorException($cmd.' -> '.$output);
-            }
-            return true;
-        }*/
-
         $cmd = 'hg init 2>&1';
         $out = array();
         $ret = -1;
@@ -92,7 +80,6 @@ class HgDriver implements DVCSDriver {
         if ( $ret !== 0 ) {
             throw new HgDriverErrorException('Hg init failed on '.$cmd.PHP_EOL.implode(PHP_EOL, $out));
         }
-        //Bypass permissions setting
         //$this->setPermissions(getcwd());
         return true;
     }

@@ -86,21 +86,21 @@ class HgBackend extends Backend {
      * @return <type>
      * @todo move hgroopath creation to an install script
      */
-    public function createReference($repository) {        
+    public function createReference($repository) {
         if ( $repository->exists() ) {
-             throw new HgBackendException('Repository already exists');
-        }        
+            throw new HgBackendException('Repository already exists');
+        }
         $path = $repository->getPath();
         //create hg root if does not exist
         $this->createHgRoot();
         //create project dir if does not exists
         $this->createProjectRoot($repository);
         $path = $this->getHgRootPath().DIRECTORY_SEPARATOR.$path;
-        mkdir($path, 0770, true);
+        mkdir($path, 0775, true);
         chdir($path);
         $this->getDriver()->init($bare=true);
-        $this->getDriver()->activateHook('post-update', $path, 'codendiadm', $repository->getProject()->getUnixName());
-        $this->setRepositoryPermissions($repository);        
+        //$this->getDriver()->activateHook('post-update', $path, 'codendiadm', $repository->getProject()->getUnixName());
+        $this->setRepositoryPermissions($repository);
         $id = $this->getDao()->save($repository);
         $repository->setId($id);
         $this->changeRepositoryAccess($repository);
@@ -112,7 +112,7 @@ class HgBackend extends Backend {
         if ( empty($path) ) {
             throw new HgBackendException('Bad repository path: '.$path);
         }
-        $path = $this->getHgRootPath().DIRECTORY_SEPARATOR.$path;        
+        $path = $this->getHgRootPath().DIRECTORY_SEPARATOR.$path;
         if ( $this->getDao()->hasChild($repository) === true ) {
             throw new HgBackendException( $GLOBALS['Language']->getText('plugin_hg', 'backend_delete_haschild_error') );
         }
